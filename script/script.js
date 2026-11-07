@@ -62,7 +62,7 @@ const buracosNegros = [
     ano: "Origem Antiga / Lenda",
     massa: "Incalculável / Infinita",
     distancia: "Além do nosso universo visível",
-    imagem: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600",
+    imagem: "https://hypescience.com/wp-content/uploads/2024/11/buraco-negro-devorando-materia-40x-mais-do-que-o-limite-1.jpg",
     descricao: "Uma lenda cósmica que representa o fim de todas as eras, engolindo galáxias inteiras no folclore estelar."
   },
   {
