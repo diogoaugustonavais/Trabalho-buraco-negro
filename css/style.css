@@ -1,0 +1,335 @@
+/* ==========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+   ================================---------- */
+:root {
+  --largura-conteudo: 1100px;
+  --fundo-pagina: #0d1117;
+  --fundo-painel: #161b22;
+  --fundo-elemento: #21262d;
+  --borda-suave: #30363d;
+  --texto-principal: #f0f6fc;
+  --texto-secundario: #8b949e;
+  --cor-destaque: #58a6ff;
+  --cor-sucesso: #238636;
+  --cor-sucesso-hover: #2ea043;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--fundo-pagina);
+  color: var(--texto-principal);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   2. CABEÇALHO E NAVEGAÇÃO (ABAS)
+   ================================---------- */
+.cabecalho-site {
+  background: var(--fundo-painel);
+  border-bottom: 1px solid var(--borda-suave);
+  padding: 20px 0;
+}
+
+.conteudo-cabecalho,
+.conteudo-navegacao,
+main {
+  width: min(100% - 32px, var(--largura-conteudo));
+  margin-inline: auto;
+}
+
+.identidade-marca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icone-marca img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.identidade-marca h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.identidade-marca p {
+  margin: 4px 0 0;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+.navegacao-site {
+  background: var(--fundo-elemento);
+  border-bottom: 1px solid var(--borda-suave);
+}
+
+.conteudo-navegacao {
+  display: flex;
+  gap: 12px;
+  padding-block: 10px;
+}
+
+.link-navegacao {
+  color: #c9d1d9;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.link-navegacao:hover,
+.link-navegacao[aria-current="page"] {
+  background: var(--borda-suave);
+  color: #ffffff;
+}
+
+/* ==========================================
+   3. ESTRUTURA PRINCIPAL E PAINÉIS
+   ================================---------- */
+main {
+  margin-block: 30px 60px;
+}
+
+.tela[hidden] {
+  display: none !important;
+}
+
+.apresentacao {
+  margin-bottom: 24px;
+}
+
+.destaque-apresentacao {
+  color: var(--cor-destaque);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 6px;
+}
+
+.apresentacao h2 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.apresentacao p {
+  margin: 0;
+  color: var(--texto-secundario);
+}
+
+.painel {
+  background: var(--fundo-painel);
+  border: 1px solid var(--borda-suave);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.cabecalho-painel {
+  margin-bottom: 20px;
+}
+
+.cabecalho-painel p {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   4. ÁREA DE BUSCA E PRÉVIA (CARTÃO)
+   ================================---------- */
+.area-votacao {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.9fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.previa-voto {
+  min-height: 245px;
+  padding: 20px;
+  border: 1px dashed var(--borda-suave);
+  border-radius: 10px;
+  background: var(--fundo-pagina);
+}
+
+.mensagem-previa {
+  display: grid;
+  min-height: 200px;
+  place-content: center;
+  justify-items: center;
+  color: var(--texto-secundario);
+  text-align: center;
+}
+
+.icone-previa {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 10px;
+  place-items: center;
+  color: var(--cor-destaque);
+  border: 1px solid var(--borda-suave);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  background: var(--fundo-painel);
+}
+
+/* Cartão do Buraco Negro renderizado */
+.previa-candidato {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  align-items: center;
+  min-height: 270px;
+}
+
+.previa-candidato img {
+  width: 110px;
+  height: 130px;
+  object-fit: cover;
+  border: 1px solid var(--borda-suave);
+  border-radius: 8px;
+  background: var(--fundo-elemento);
+}
+
+.previa-candidato h4 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.numero-candidato {
+  display: inline-flex;
+  margin: 4px 0 8px;
+  padding: 3px 10px;
+  color: var(--cor-destaque);
+  border: 1px solid var(--borda-suave);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--fundo-elemento);
+}
+
+.descricao-candidato {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   5. FORMULÁRIO E BOTÃO DE BUSCA
+   ================================---------- */
+.formulario-voto {
+  display: grid;
+  gap: 16px;
+}
+
+.campo {
+  display: grid;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.campo input {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 14px;
+  color: var(--texto-principal);
+  border: 1px solid var(--borda-suave);
+  border-radius: 8px;
+  background: var(--fundo-pagina);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+}
+
+.dica-campo {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: 0.8rem;
+}
+
+.botao {
+  display: inline-flex;
+  min-height: 42px;
+  padding: 10px 18px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: 1px solid var(--borda-suave);
+  border-radius: 8px;
+  background: var(--cor-sucesso);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.botao:hover {
+  background: var(--cor-sucesso-hover);
+}
+
+/* ==========================================
+   6. TELA 2: LISTA DE CADASTRADOS
+   ================================---------- */
+.painel-instrucoes {
+  background: var(--fundo-painel);
+  border: 1px solid var(--borda-suave);
+}
+
+.lista-instrucoes {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  color: var(--texto-secundario);
+}
+
+.lista-instrucoes li {
+  line-height: 1.5;
+}
+
+.lista-instrucoes strong {
+  color: var(--cor-destaque);
+  font-size: 1.1rem;
+}
+
+.lista-instrucoes span {
+  color: var(--texto-principal);
+}
+
+/* ==========================================
+   7. RESPONSIVIDADE (CELULARES)
+   ================================---------- */
+@media (max-width: 700px) {
+  .area-votacao {
+    grid-template-columns: 1fr;
+  }
+}
