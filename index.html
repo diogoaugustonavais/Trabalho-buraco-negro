@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D7D2D">
+  <title>Buraco Negro</title>
+  <link rel="icon" type="image/x-icon" href="img/icone_3.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho-site">
+    <div class="conteudo-cabecalho identidade-marca">
+      <div class="icone-marca">
+        <img src="img/icone_3.png" alt="Ícone do site">
+      </div>
+      <div>
+        <h1>Buracos Negros</h1>
+        <p>Um site para ver as informações de um buraco negro fictício ou real</p>
+      </div>
+    </div>
+  </header>
+  <nav class="navegacao-site" aria-label="Navegação principal">
+    <div class="conteudo-navegacao">
+      <a class="link-navegacao" href="#inicio" data-view-link="inicio" aria-current="page">
+        <span>Início</span>
+      </a>
+      <a class="link-navegacao" href="#instrucoes" data-view-link="instrucoes">Buracos Negros Cadastrados</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="tela conteudo-pagina" id="view-inicio" data-view="inicio" aria-labelledby="titulo-inicio">
+      <div class="apresentacao">
+        <p class="destaque-apresentacao">Área de pesquisa</p>
+        <h2 id="titulo-inicio">Procure um Buraco Negro</h2>
+        <p>Digite o nome do buraco negro para ele aparecer.</p>
+      </div>
+
+      <section class="painel" aria-labelledby="titulo-voto">
+        <div class="cabecalho-painel">
+          <p>Confira o nome do Buraco Negro para ver as informações.</p>
+        </div>
+
+        <div class="area-votacao">
+          <div class="previa-voto" id="vote-preview" aria-live="polite" aria-atomic="true">
+            <div class="mensagem-previa">
+              <span class="icone-previa" aria-hidden="true">◉</span>
+              <p>Digite um nome válido para ver a foto e as informações aqui.</p>
+            </div>
+          </div>
+
+          <form class="formulario-voto" id="vote-form">
+            <div class="campo">
+              <label for="vote-number">Nome</label>
+              <input
+                id="vote-number"
+                name="nome"
+                type="text"
+                placeholder="Ex.: Sagittarius A*"
+              >
+              <p class="dica-campo" id="vote-hint">Informe o nome de um buraco negro.</p>
+            </div>
+            <button class="botao" id="vote-button" type="submit">Ver Informações</button>
+            <p class="mensagem-status" id="vote-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <section class="tela conteudo-pagina" id="view-instrucoes" data-view="instrucoes" aria-labelledby="titulo-instrucoes" hidden>
+      <div class="apresentacao">
+        <h2 id="titulo-instrucoes">Buracos Negros Cadastrados</h2>
+        <p>Confira os principais buracos negros disponíveis na nossa base de dados:</p>
+      </div>
+
+      <div class="painel painel-instrucoes">
+        <ol class="lista-instrucoes" id="lista-cadastrados-completa">
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <script src="script/script.js" defer></script>
+</body>
+</html>
