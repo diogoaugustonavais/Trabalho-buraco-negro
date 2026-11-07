@@ -71,7 +71,7 @@ const buracosNegros = [
     ano: "2014 (Lançamento do Filme)",
     massa: "100 milhões de massas solares",
     distancia: "10 bilhões de anos-luz (Sistema fictício)",
-    imagem: "https://images.unsplash.com/photo-1538370965046-79c0d6907d47?w=600",
+    imagem: "https://cdn.universoracionalista.org/wp-content/uploads/2020/07/gargantua-interestellar.jpg",
     descricao: "O icônico buraco negro rotativo do filme Interstellar, famoso por seu gigantesco disco de acreção."
   }
 ];
