@@ -44,7 +44,7 @@ const buracosNegros = [
     ano: "1847 (Galáxia descoberta / Buraco negro mapeado depois)",
     massa: "55 milhões de massas solares",
     distancia: "13 milhões de anos-luz",
-    imagem: "https://pt.wikipedia.org/wiki/Ficheiro:Centaurus_A.jpg",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Centaurus_A.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     descricao: "Possui jatos relativísticos gigantescos que se estendem por centenas de milhares de anos-luz no espaço."
   },
   {
