@@ -153,13 +153,13 @@ main {
    ================================---------- */
 .area-votacao {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.9fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(250px, 0.9fr);
   gap: 28px;
   align-items: center;
 }
 
 .previa-voto {
-  min-height: 245px;
+  min-height: 300px;
   padding: 20px;
   border: 1px dashed var(--borda-suave);
   border-radius: 10px;
@@ -192,14 +192,14 @@ main {
 .previa-candidato {
   display: grid;
   grid-template-columns: 110px 1fr;
-  gap: 18px;
+  gap: 170px;
   align-items: center;
   min-height: 270px;
 }
 
 .previa-candidato img {
-  width: 130px;
-  height: 130px;
+  width: 270px;
+  height: 270px;
   object-fit: cover;
   border: 1px solid var(--borda-suave);
   border-radius: 8px;
@@ -225,7 +225,7 @@ main {
 }
 
 .descricao-candidato {
-  margin: 0;
+  margin: 60;
   color: var(--texto-secundario);
   font-size: 0.9rem;
   line-height: 1.4;
