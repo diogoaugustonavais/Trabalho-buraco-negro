@@ -198,7 +198,7 @@ main {
 }
 
 .previa-candidato img {
-  width: 110px;
+  width: 130px;
   height: 130px;
   object-fit: cover;
   border: 1px solid var(--borda-suave);
