@@ -57,7 +57,7 @@ const buracosNegros = [
     descricao: "Uma singularidade criada artificialmente por uma espaçonave para dobrar o espaço-tempo, abrindo um portal para uma dimensão caótica."
   },
   {
-    nome: "O Devorador de Mundos (Mitológico)",
+    nome: "O Devorador de Mundos",
     tipo: "Entidade Ancestral (Mitologia Cósmica)",
     ano: "Origem Antiga / Lenda",
     massa: "Incalculável / Infinita",
